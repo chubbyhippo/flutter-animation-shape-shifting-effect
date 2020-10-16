@@ -28,6 +28,14 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
     color = randomColor();
     borderRadius = randomBorderRadius();
     margin = randomMargin();
+
+    void change() {
+      setState(() {
+        color = randomColor();
+        borderRadius = randomBorderRadius();
+        margin = randomMargin();
+      });
+    }
   }
 
   @override
@@ -39,7 +47,7 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
             SizedBox(
               width: 128,
               height: 128,
-              child: Container(
+              child: AnimatedContainer(
                 margin: EdgeInsets.all(margin),
                 decoration: BoxDecoration(
                   color: color,
