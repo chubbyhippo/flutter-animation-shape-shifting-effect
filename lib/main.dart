@@ -28,14 +28,14 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
     color = randomColor();
     borderRadius = randomBorderRadius();
     margin = randomMargin();
+  }
 
-    void change() {
-      setState(() {
-        color = randomColor();
-        borderRadius = randomBorderRadius();
-        margin = randomMargin();
-      });
-    }
+  void change() {
+    setState(() {
+      color = randomColor();
+      borderRadius = randomBorderRadius();
+      margin = randomMargin();
+    });
   }
 
   @override
@@ -57,7 +57,7 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
             ),
             ElevatedButton(
               child: Text('change'),
-              onPressed: () => null,
+              onPressed: () => change(),
             ),
           ],
         ),
