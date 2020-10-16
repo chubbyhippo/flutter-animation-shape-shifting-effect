@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+const _duration = Duration(microseconds: 400);
 
 double randomBorderRadius() {
   return Random().nextDouble() * 64;
@@ -53,6 +54,7 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
                   color: color,
                   borderRadius: BorderRadius.circular(borderRadius),
                 ),
+                duration: _duration,
               ),
             ),
             ElevatedButton(
