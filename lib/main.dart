@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-const _duration = Duration(microseconds: 400);
+
+const _duration = Duration(milliseconds: 400);
 
 double randomBorderRadius() {
   return Random().nextDouble() * 64;
@@ -25,8 +26,9 @@ class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
   double margin;
 
   @override
-  initState() {
-    color = randomColor();
+  void initState() {
+    super.initState();
+    color = Colors.deepPurple;
     borderRadius = randomBorderRadius();
     margin = randomMargin();
   }
